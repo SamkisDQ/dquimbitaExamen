@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquimbitaExamen.Vistas.vResumen"
+             Title="vResumen">
+    <VerticalStackLayout 
+                Padding="30.0"
+                Spacing="25">
+        <Label 
+                Text="RESUMEN"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                TextColor="Red"
+         />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Nombre:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombreR"  Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Apellido:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtApellidoR" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Edad:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtEdadR"   Grid.Row="2" Grid.Column="1"/>
+            <Label Text="Fecha:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtFechaR"  Grid.Row="3" Grid.Column="1"/>
+            <Label Text="Ciudad:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+            <Entry x:Name="txtCiudadR"   Grid.Row="4" Grid.Column="1"/>
+            <Label Text="Pais:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="5" Grid.Column="0"/>
+            <Entry x:Name="txtPaisR"  Grid.Row="5" Grid.Column="1"/>
+            <Label Text="Monto Inicial:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="6" Grid.Column="0"/>
+            <Entry x:Name="txtMontoIniR"  Grid.Row="6" Grid.Column="1"/>
+            <Label Text="Monto Mensual:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="7" Grid.Column="0"/>
+            <Entry x:Name="txtMontoMenR"  Grid.Row="7" Grid.Column="1"/>
+            <Label Text="Total Pagar:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="8" Grid.Column="0"/>
+            <Entry x:Name="txtTotalR"  Grid.Row="8" Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

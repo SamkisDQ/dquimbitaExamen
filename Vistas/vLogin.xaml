@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquimbitaExamen.Vistas.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+            Padding="30.0"
+            Spacing="25">
+        <Label 
+     Text="INICIO DE SESION"
+     HorizontalTextAlignment="Center"
+     FontSize="20"
+     TextColor="Red"
+     />
+        <Image Source="logouisrael.png" HeightRequest="50"></Image>
+        <Grid>
+            <!-- wewqqeeeeeeeeeeeeeeeee -->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese usuario"  Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Clave:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtClave" Placeholder="Ingrese contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+        <Button x:Name="btnInicio" Text="INICIAR SESION" Clicked="btnInicio_Clicked" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

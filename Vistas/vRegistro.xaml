@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dquimbitaExamen.Vistas.vRegistro"
+             Title="vRegistro">
+    <VerticalStackLayout>
+        <Label 
+            Text="REGISTRO"
+              HorizontalTextAlignment="Center"
+              FontSize="20"
+              TextColor="Red"/>
+        <Label x:Name="lblUsuarioConectado" TextColor="Red" FontSize="18" HorizontalTextAlignment="End"></Label>
+        <Grid Padding="15">
+            <!-- PRIMER GRID -->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Fecha:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <DatePicker x:Name="dpFecha" Date="04/25/2024" Format="DD/MM/yyyy" Grid.Row="0" Grid.Column="1"></DatePicker>
+            <Label Text="Pais:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="pkPaises" Title="PAISES" Grid.Row="1" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Argentina</x:String>
+                    <x:String>Colombia</x:String>
+                    <x:String>Chile</x:String>
+                    <x:String>Brasil</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Ciudad:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Picker x:Name="pkCiudades" Title="CIUDADES" Grid.Row="2" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Guayaquil</x:String>
+                    <x:String>Manta</x:String>
+                    <x:String>Cuenca</x:String>
+                    <x:String>Latacunga</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Monto inicial:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtMontoInicial" Placeholder="Monto inicial" MaxLength="6" Grid.Row="3" Grid.Column="1"/>
+            <Label Text="Monto mensual:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+            <Entry x:Name="txtMontoMensual" Placeholder="Monto Mensual" Grid.Row="4" Grid.Column="1" IsReadOnly="True"/>
+        </Grid>
+
+        <!-- SEGUNDO GRID-->
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Nombre:"  VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese Nombre" MaxLength="6" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Apellido:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese Apellido"  Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Edad:"  VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="2"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingrese Edad"  Grid.Row="1" Grid.Column="2"/>
+        </Grid>
+        <!-- TERCER GRID-->
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnMensual" Text="Calcular pago mensual" Clicked="btnMensual_Clicked" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Button x:Name="btnResumen" Text="Ver resumen" Clicked="btnResumen_Clicked" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
