@@ -18,7 +18,7 @@ public partial class vRegistro : ContentPage
         }
         else
         {
-            double pagoMensual = ((1500 - montoInicial) / 4) + (1500 / 1.04);
+            double pagoMensual = ((1500 - montoInicial) / 4) + (1500 * 0.04);
             txtMontoMensual.Text = pagoMensual.ToString("F2");
         }
     }
@@ -29,7 +29,7 @@ public partial class vRegistro : ContentPage
         string pais = pkCiudades.Items[pkCiudades.SelectedIndex].ToString();
         string fecha = dpFecha.Date.ToString();
         double montoInicial = Convert.ToDouble(txtMontoInicial.Text);
-        double pagoMensual = ((1500 - montoInicial) / 4) + (1500 / 1.04);
+        double pagoMensual = ((1500 - montoInicial) / 4) + (1500 * 0.04);
         string nombre=txtNombre.Text;   
         string apellido=txtApellido.Text;    
         string edad=  txtEdad.Text;
